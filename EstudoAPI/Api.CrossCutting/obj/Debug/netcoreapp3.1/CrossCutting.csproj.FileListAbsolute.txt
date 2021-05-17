@@ -1,0 +1,9 @@
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\bin\Debug\netcoreapp3.1\CrossCutting.deps.json
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\bin\Debug\netcoreapp3.1\CrossCutting.dll
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\bin\Debug\netcoreapp3.1\CrossCutting.pdb
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csprojAssemblyReference.cache
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.AssemblyInfoInputs.cache
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.AssemblyInfo.cs
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.dll
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.pdb
