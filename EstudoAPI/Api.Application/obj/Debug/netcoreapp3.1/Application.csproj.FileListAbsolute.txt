@@ -47,3 +47,5 @@ C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Applic
 C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Application\bin\Debug\netcoreapp3.1\CrossCutting.pdb
 C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Application\bin\Debug\netcoreapp3.1\Data.pdb
 C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Application\obj\Debug\netcoreapp3.1\Application.csproj.CopyComplete
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Application\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Application\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
