@@ -19,24 +19,24 @@ namespace Api.Service.Services
             return await _repository.DeleteAsync(id);
         }
 
-        public Task<IEnumerable<UserEntity>> GetAll()
+        public async Task<IEnumerable<UserEntity>> GetAll()
         {
-            throw new System.NotImplementedException();
+            return await _repository.SelectAsync();
         }
 
-        public Task<UserEntity> Get(int id)
+        public async Task<UserEntity> Get(int id)
         {
-
+            return await _repository.SelectAsync(id);
         }
 
-        public Task<UserEntity> Post(UserEntity user)
+        public async Task<UserEntity> Post(UserEntity user)
         {
-            throw new System.NotImplementedException();
+            return await _repository.InsertAsync(user);
         }
 
-        public Task<UserEntity> Put(UserEntity user)
+        public async Task<UserEntity> Put(UserEntity user)
         {
-            throw new System.NotImplementedException();
+            return await _repository.UpdateAsync(user);
         }
     }
 }
