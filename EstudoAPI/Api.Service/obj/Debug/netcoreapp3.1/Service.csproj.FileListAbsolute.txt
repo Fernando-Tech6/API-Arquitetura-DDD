@@ -7,3 +7,10 @@ C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Servic
 C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
 C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\obj\Debug\netcoreapp3.1\Service.dll
 C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\obj\Debug\netcoreapp3.1\Service.pdb
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.dll
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.pdb
+C:\Users\ferda\Desktop\Studyspace\Asp Net\API\EstudoAPI-DDD\EstudoAPI\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
