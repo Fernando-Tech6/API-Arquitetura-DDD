@@ -92,7 +92,7 @@ namespace Api.Data.Repository
                     return null;
                 }
 
-                item.UpdateAt = DateTime.UtcNow;
+                item.UpdateAt = DateTime.UtcNow;  // Só será adicionada quando utilizar o método update. Será setada com a data e hora atual
                 item.CreateAt = result.CreateAt;  // O create vai receber a mesma data do cadastro
 
                 _context.Entry(result).CurrentValues.SetValues(item);

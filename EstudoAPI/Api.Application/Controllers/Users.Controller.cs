@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Api.Domain.Entities;
 using Api.Domain.Interfaces.Services.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,6 +32,7 @@ namespace Api.Application.Controllers
             {
                 var get = await _service.GetAll();
                 return Ok(get);
+                //return new ObjectResult(new { msg = "Tem Coisa Aqui" });
             }
             catch (ArgumentException)
             {
@@ -51,7 +53,7 @@ namespace Api.Application.Controllers
 
             try
             {
-                var get = await _service.GetAll();
+                var get = await _service.Get(id);
                 return Ok(get);
             }
             catch (ArgumentException)
@@ -60,6 +62,82 @@ namespace Api.Application.Controllers
                 return new ObjectResult(new { msg = "Não Encontrado" });
             }
 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] UserEntity user)  //Precisa de um Entidade, pois é necessário passar no body
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var post = await _service.Post(user);
+                if (post != null)
+                {
+                    return Created(new Uri(Url.Link("GetWithId", new { id = post.Id })), post);
+                }
+                else
+                {
+                    Response.StatusCode = 404;
+                    return new ObjectResult(new { msg = "Não Encontrado" });
+                }
+            }
+            catch (ArgumentException)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Não Encontrado" });
+            }
+        }
+
+        [HttpPatch]
+        public async Task<IActionResult> Patch([FromBody] UserEntity user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var patch = await _service.Patch(user);
+                if (patch != null)
+                {
+                    return Ok(patch);
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (ArgumentException)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Não Encontrado" });
+            }
+        }
+
+        [HttpDelete]
+        [Route("deletar/{id}")]
+        public async Task<IActionResult> Delet(int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var delete = await _service.Delete(id);
+                return Ok();
+            }
+            catch (ArgumentException)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Não Encontrado" });
+            }
         }
     }
 }

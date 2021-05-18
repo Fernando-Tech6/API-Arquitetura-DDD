@@ -9,7 +9,7 @@ namespace Api.Domain.Interfaces.Services.User
         Task<UserEntity> Get(int id);
         Task<IEnumerable<UserEntity>> GetAll();
         Task<UserEntity> Post(UserEntity user);
-        Task<UserEntity> Put(UserEntity user);
+        Task<UserEntity> Patch(UserEntity user);
         Task<bool> Delete(int id);
     }
 }
