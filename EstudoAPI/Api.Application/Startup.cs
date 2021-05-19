@@ -1,9 +1,11 @@
+using System;
 using Api.CrossCutting.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace Application
 {
@@ -27,7 +29,19 @@ namespace Application
             /*Swagger*/
             services.AddSwaggerGen(t =>
            {
-               //t.SwaggerDoc("")
+               t.SwaggerDoc("v1", new OpenApiInfo
+               {        /*Pode criar documentos com informações sobre a api*/
+                   Version = "v1",
+                   Title = "Estudo API + DDD",
+                   Description = "Arquitetura DDD",
+                   TermsOfService = new Uri("hht://adicionaalgumsite"),
+                   Contact = new OpenApiContact
+                   {
+                       Name = "Seu Nome",
+                       Email = "seuemail.com",
+                       Url = new Uri("http://site.com")
+                   }
+               });
            });
 
         }
