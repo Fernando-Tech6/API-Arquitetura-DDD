@@ -24,6 +24,12 @@ namespace Application
 
             services.AddControllers();
 
+            /*Swagger*/
+            services.AddSwaggerGen(t =>
+           {
+               //t.SwaggerDoc("")
+           });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +41,15 @@ namespace Application
             }
 
             app.UseHttpsRedirection();
+
+
+            /*Swagger. É passado o endpoint para o swagger + o nome da applicação*/
+            app.UseSwagger();
+            app.UseSwaggerUI(t =>
+            {
+                t.SwaggerEndpoint("/swagger/v1/swagger.json", "Estudo API + DDD");
+                t.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 
