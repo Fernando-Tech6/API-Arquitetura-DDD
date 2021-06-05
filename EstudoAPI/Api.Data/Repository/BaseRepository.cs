@@ -57,18 +57,6 @@ namespace Api.Data.Repository
             return await _dataset.AnyAsync(t => t.Id.Equals(id));
         }
 
-        public async Task<T> SelectAsync(int id)
-        {
-            try
-            {
-                return await _dataset.SingleOrDefaultAsync(t => t.Id.Equals(id));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         public async Task<IEnumerable<T>> SelectAsync()
         {
             try
@@ -104,6 +92,20 @@ namespace Api.Data.Repository
             }
 
             return item;
+        }
+
+        public async Task<T> SelectIdAsync(int id)
+        {
+
+            try
+            {
+                return await _dataset.SingleOrDefaultAsync(t => t.Id.Equals(id));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }

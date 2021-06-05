@@ -1,7 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using Api.Domain.Entities;
+using Api.Domain.Dtos;
 using Api.Domain.Interfaces.Services.User;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Application.Controllers
@@ -32,7 +33,7 @@ namespace Api.Application.Controllers
             {
                 var get = await _service.GetAll();
                 return Ok(get);
-                //return new ObjectResult(new { msg = "Tem Coisa Aqui" });
+
             }
             catch (ArgumentException)
             {
@@ -65,7 +66,8 @@ namespace Api.Application.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] UserEntity user)  //Precisa de um Entidade, pois é necessário passar no body
+        [Authorize(Roles = "manager")]
+        public async Task<IActionResult> Post([FromBody] UserDtoCreate user)
         {
             if (!ModelState.IsValid)
             {
@@ -93,7 +95,8 @@ namespace Api.Application.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> Patch([FromBody] UserEntity user)
+        [Authorize(Roles = "manager")]
+        public async Task<IActionResult> Patch([FromBody] UserDtoUpdate user)
         {
             if (!ModelState.IsValid)
             {
@@ -121,6 +124,7 @@ namespace Api.Application.Controllers
 
         [HttpDelete]
         [Route("deletar/{id}")]
+        [Authorize(Roles = "manager")]
         public async Task<IActionResult> Delet(int id)
         {
             if (!ModelState.IsValid)

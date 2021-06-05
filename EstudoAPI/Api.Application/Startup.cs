@@ -1,6 +1,9 @@
 using System;
 using Api.CrossCutting.DependencyInjection;
+using Api.CrossCutting.JwtInjection;
+using Api.CrossCutting.Mappings;
 using Api.Data.Context;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,7 +29,17 @@ namespace Application
             ConfigureService.ConfigureDependenciesService(services); //Necessario passar a classe e o metodo para habilitar a injeção
             ConfigureRepository.ConfigureDependenciesRepository(services);
 
-
+            /*Criar uma configuração para o automapper e adicionar os mapeamentos do dtos*/
+            var config = new AutoMapper.MapperConfiguration(conf =>
+            {
+                conf.AddProfile(new DtoToModelProfile());
+                conf.AddProfile(new EntityToDtoProfile());
+                conf.AddProfile(new ModelToEntityProfile());
+            }
+            );
+            /*Injeção de dependencia do automapper*/
+            IMapper mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddControllers();
 
@@ -47,6 +60,9 @@ namespace Application
                    }
                });
            });
+
+            /*Injeção do jwt*/
+            ConfigureJwt.JwtDependecy(services);
 
         }
 
@@ -70,6 +86,8 @@ namespace Application
             });
 
             app.UseRouting();
+
+            app.UseAuthentication();  //Autenticando o token
 
             app.UseAuthorization();
 

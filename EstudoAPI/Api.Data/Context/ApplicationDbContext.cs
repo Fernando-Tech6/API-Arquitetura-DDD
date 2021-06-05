@@ -7,6 +7,9 @@ namespace Api.Data.Context
     public class ApplicationDbContext : DbContext
     {
         public DbSet<UserEntity> Users { get; set; }
+        public DbSet<LoginUser> Logins { get; set; }
+
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
