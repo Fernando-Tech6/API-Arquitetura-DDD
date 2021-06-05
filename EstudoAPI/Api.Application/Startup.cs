@@ -29,6 +29,10 @@ namespace Application
             ConfigureService.ConfigureDependenciesService(services); //Necessario passar a classe e o metodo para habilitar a injeção
             ConfigureRepository.ConfigureDependenciesRepository(services);
 
+            var conexao = Configuration.GetConnectionString("Default");
+            services.AddDbContext<ApplicationDbContext>(t => t.UseNpgsql(conexao));
+
+
             /*Criar uma configuração para o automapper e adicionar os mapeamentos do dtos*/
             var config = new AutoMapper.MapperConfiguration(conf =>
             {
@@ -59,7 +63,32 @@ namespace Application
                        Url = new Uri("http://site.com")
                    }
                });
+
+               /*Servirá para utilizar a autenticação no swagger
+               */
+               t.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+               {
+                   Name = "Authorization",
+                   In = ParameterLocation.Header,
+                   Type = SecuritySchemeType.ApiKey,
+                   Scheme = "Bearer"
+               });
+               t.AddSecurityRequirement(new OpenApiSecurityRequirement
+                 {
+                     {
+                         new OpenApiSecurityScheme
+                         {
+                             Reference = new OpenApiReference
+                             {
+                                 Type = ReferenceType.SecurityScheme,
+                                 Id = "Bearer"
+                             }
+                         },
+                         Array.Empty<string>()
+                     }
+                 });
            });
+
 
             /*Injeção do jwt*/
             ConfigureJwt.JwtDependecy(services);
