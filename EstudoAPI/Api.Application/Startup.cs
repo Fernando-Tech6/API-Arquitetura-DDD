@@ -1,7 +1,9 @@
 using System;
 using Api.CrossCutting.DependencyInjection;
+using Api.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +25,8 @@ namespace Application
         {
             ConfigureService.ConfigureDependenciesService(services); //Necessario passar a classe e o metodo para habilitar a injeção
             ConfigureRepository.ConfigureDependenciesRepository(services);
+
+
 
             services.AddControllers();
 

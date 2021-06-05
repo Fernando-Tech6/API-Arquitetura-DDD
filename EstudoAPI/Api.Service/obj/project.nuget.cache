@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vGo5n2xvHDSux/LlqbjIDElRD92SW+BdxPrZOBwFEI5QR2FlpiiMmjxdiF4Ta2sAtBZ7PwpGEu7uawE3kCrMyg==",
+  "dgSpecHash": "cRch6wo3UWXRrK02mcf6OgJh+rze+8xGQrlgbBa0AbWtZ96hLAUdiGDJxnYZyFWieVEXh+E3xjNWabXuj3SrTQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ferda\\Desktop\\Studyspace\\Asp Net\\API\\EstudoAPI-DDD\\EstudoAPI\\Api.Service\\Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ferda\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "C:\\Users\\ferda\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.4\\microsoft.entityframeworkcore.3.1.4.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.4\\microsoft.entityframeworkcore.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.4\\microsoft.entityframeworkcore.analyzers.3.1.4.nupkg.sha512",
@@ -26,6 +28,7 @@
     "C:\\Users\\ferda\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\ferda\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\ferda\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
